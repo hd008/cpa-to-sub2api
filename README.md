@@ -30,6 +30,9 @@ cpa-to-sub2api-summary.csv
 
 BAT 会固定处理“BAT 自己所在的文件夹”，不是命令行当前目录。
 
+<img width="1889" height="935" alt="84287d52e68b9fa6200e2e8d47ba9b65" src="https://github.com/user-attachments/assets/7dcfc955-7bec-496e-8e24-56a2b9c460d0" />
+
+
 ## 输入格式
 
 每个 CPA JSON 文件大概长这样：
