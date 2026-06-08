@@ -44,6 +44,14 @@ Put `CpaToSub2Api.bat` in the folder containing CPA JSON files, double-click it,
 
 `sub2api.json` contains real OAuth credentials. Keep it private.
 
+## 致谢
+
+感谢真诚、友善、团结、专业的 [LinuxDo](https://linux.do/) 社区，让我学到那么多有关 AI 的知识。
+
+LinuxDo
+
+LinuxDo 学 AI，上 L 站！
+
 ## License
 
 MIT

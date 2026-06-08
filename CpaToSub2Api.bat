@@ -190,9 +190,7 @@ function Add-IfNotBlank {
 $resolvedInput = Resolve-Path -LiteralPath $InputDir
 $skipNames = @(
     $OutputJson,
-    "cpa-to-sub2api-summary.csv",
-    "sub2api.redacted.json",
-    "cpa-summary.csv"
+    "sub2api.redacted.json"
 )
 
 $jsonFiles = @(Get-ChildItem -LiteralPath $resolvedInput -Filter "*.json" -File |
