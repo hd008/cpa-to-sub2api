@@ -6,7 +6,7 @@
 
 只需要下载这一个文件：
 
-https://github.com/hd008/cpa-to-sub2api/releases/download/v1.0.1/CpaToSub2Api.bat
+https://github.com/hd008/cpa-to-sub2api/releases/download/v1.0.2/CpaToSub2Api.bat
 
 ## 使用
 
@@ -38,7 +38,7 @@ One-click Windows BAT tool for merging multiple CPA JSON files into a Sub2API im
 
 Download:
 
-https://github.com/hd008/cpa-to-sub2api/releases/download/v1.0.1/CpaToSub2Api.bat
+https://github.com/hd008/cpa-to-sub2api/releases/download/v1.0.2/CpaToSub2Api.bat
 
 Put `CpaToSub2Api.bat` in the folder containing CPA JSON files, double-click it, then import the generated `sub2api.json` into Sub2API.
 
@@ -55,4 +55,5 @@ LinuxDo 学 AI，上 L 站！
 ## License
 
 MIT
+
 
