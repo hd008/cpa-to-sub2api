@@ -18,7 +18,6 @@ https://github.com/hd008/cpa-to-sub2api/releases/download/v1.0.0/CpaToSub2Api.ba
 
 ```text
 sub2api.json
-cpa-to-sub2api-summary.csv
 ```
 
 把 `sub2api.json` 导入 Sub2API 即可。

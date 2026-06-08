@@ -23,7 +23,7 @@ if errorlevel 1 (
 echo Generating sub2api.json ...
 echo.
 
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%PS_FILE%" -InputDir "%TARGET_DIR%" -OutputJson "sub2api.json" -SummaryCsv "cpa-to-sub2api-summary.csv"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%PS_FILE%" -InputDir "%TARGET_DIR%" -OutputJson "sub2api.json"
 set "STATUS=%ERRORLEVEL%"
 
 del "%PS_FILE%" >nul 2>nul
@@ -43,7 +43,6 @@ exit /b %STATUS%
 param(
     [string]$InputDir = ".",
     [string]$OutputJson = "sub2api.json",
-    [string]$SummaryCsv = "cpa-to-sub2api-summary.csv",
     [int]$Concurrency = 3,
     [int]$Priority = 50,
     [switch]$NoAutoPause
@@ -191,7 +190,7 @@ function Add-IfNotBlank {
 $resolvedInput = Resolve-Path -LiteralPath $InputDir
 $skipNames = @(
     $OutputJson,
-    $SummaryCsv,
+    "cpa-to-sub2api-summary.csv",
     "sub2api.redacted.json",
     "cpa-summary.csv"
 )
@@ -357,7 +356,7 @@ foreach ($file in $jsonFiles) {
 }
 
 if ($accounts.Count -eq 0) {
-    throw "No importable CPA files found. See $SummaryCsv for details."
+    throw "No importable CPA files found."
 }
 
 $payload = [ordered]@{
@@ -369,13 +368,10 @@ $payload = [ordered]@{
 }
 
 $outPath = Join-Path $resolvedInput $OutputJson
-$summaryPath = Join-Path $resolvedInput $SummaryCsv
 
 $payload | ConvertTo-Json -Depth 20 | Set-Content -LiteralPath $outPath -Encoding UTF8
-$summary | Export-Csv -LiteralPath $summaryPath -NoTypeInformation -Encoding UTF8
 
 $ok = @($summary | Where-Object { $_.status -eq "ok" }).Count
 $failed = @($summary | Where-Object { $_.status -ne "ok" }).Count
 Write-Host "Read $($jsonFiles.Count) JSON files. Importable=$ok SkippedOrFailed=$failed"
 Write-Host "Wrote Sub2API import file: $OutputJson"
-Write-Host "Wrote summary: $SummaryCsv"
