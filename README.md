@@ -1,6 +1,6 @@
 # cpa-to-sub2api
 
-把多个 CPA JSON 一键合并成 Sub2API 可导入的 `sub2api.json`。
+把多个 CPA JSON 一键合并成 Sub2API 可导入的 `sub2api.json`。 劳烦帮忙点个星星 祝你发财
 
 ## 下载
 
