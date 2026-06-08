@@ -8,6 +8,10 @@
 CpaToSub2Api.bat
 ```
 
+下载地址：
+
+https://github.com/hd008/cpa-to-sub2api/releases/download/v1.0.0/CpaToSub2Api.bat
+
 把它放到 CPA JSON 所在文件夹，双击运行即可。
 
 运行后会生成：
@@ -117,6 +121,10 @@ Download/copy one file only:
 ```text
 CpaToSub2Api.bat
 ```
+
+Download:
+
+https://github.com/hd008/cpa-to-sub2api/releases/download/v1.0.0/CpaToSub2Api.bat
 
 Put it in the folder containing your CPA JSON files, then double-click it.
 
