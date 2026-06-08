@@ -1,0 +1,9 @@
+sub2api.json
+sub2api.*.json
+*.redacted.json
+cpa-to-sub2api-summary.csv
+cpa-summary.csv
+token_*.json
+*.log
+.DS_Store
+Thumbs.db
